@@ -15,7 +15,7 @@ export interface Game {
   metacritic: number;
 }
 
-interface fetchGamesREsponse {
+interface fetchGamesResponse {
   count: number;
   results: Game[];
 }
@@ -31,7 +31,7 @@ const useGames = () =>{
 
       setLoading(true);
       apiClient
-        .get<fetchGamesREsponse>("/games",{signal:controller.signal})
+        .get<fetchGamesResponse>("/games",{signal:controller.signal})
         .then((res) => {
           setGames(res.data.results)
           setLoading(false);
