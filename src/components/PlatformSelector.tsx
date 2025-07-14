@@ -20,7 +20,6 @@ const PlatformSelector = ({ selectedPlatform, onSelectPlatform }: Props) => {
           <MenuItem
             onClick={() => {
               onSelectPlatform(platform);
-              console.log(platform);
             }}
             key={platform.id}
           >
