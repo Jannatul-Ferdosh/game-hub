@@ -15,7 +15,7 @@ const GenreList = () => {
   if (error) return null;
   if (isLoading) return <Spinner />;
   return (
-    <>
+    <div>
       <Heading fontSize="2xl" marginBottom="5px">
         Genres
       </Heading>
@@ -34,7 +34,7 @@ const GenreList = () => {
           </ListItem>
         ))}
       </List>
-    </>
+    </div>
   );
 };
 
