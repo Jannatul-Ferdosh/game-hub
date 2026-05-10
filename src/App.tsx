@@ -3,14 +3,18 @@ import "./App.css";
 import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
+import SortSelector from "./components/SortSelector";
 
 function App() {
   return (
     <>
       <NavBar />
       <HStack>
-        <GenreList/>
-        <PlatformSelector/>
+        <GenreList />
+        <HStack>
+          <PlatformSelector />
+          <SortSelector />
+        </HStack>
       </HStack>
     </>
   );
