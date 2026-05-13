@@ -6,7 +6,9 @@ const apiClient = new APIClient<Platform>('/platforms')
 
 const usePlatforms = () => useQuery({
     queryKey:['platforms'],
-    queryFn:apiClient.getAll
+    queryFn: apiClient.getAll,
+    // staleTime: ms("24h"),
+    // initialData: platforms
 })
 
 export default usePlatforms;

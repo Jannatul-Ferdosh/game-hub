@@ -2,7 +2,7 @@ import axios, { type AxiosRequestConfig } from "axios";
 
 interface FetchResponse<T> {
     count: number;
-    next: string;
+    next: string | null;
     results: T[];
 }
 

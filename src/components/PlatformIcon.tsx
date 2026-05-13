@@ -1,0 +1,45 @@
+import { HStack, Icon } from "@chakra-ui/react";
+import type { Platform } from "../entities/Platform";
+import type { IconType } from "react-icons/lib";
+import {
+  FaWindows,
+  FaPlaystation,
+  FaXbox,
+  FaApple,
+  FaLinux,
+  FaAndroid,
+} from "react-icons/fa";
+import { MdPhoneIphone } from "react-icons/md";
+import { SiVinted } from "react-icons/si";
+import { BsGlobe } from "react-icons/bs";
+
+interface Props {
+  platforms: Platform[];
+}
+const PlatformIcon = ({ platforms = [] }: Props) => {
+  const iconMap: { [key: string]: IconType } = {
+    pc: FaWindows,
+    playstation: FaPlaystation,
+    xbox: FaXbox,
+    nintendo: SiVinted,
+    mac: FaApple,
+    linux: FaLinux,
+    android: FaAndroid,
+    ios: MdPhoneIphone,
+    web: BsGlobe,
+  };
+
+  return (
+    <HStack>
+      {platforms.map((platform) => (
+        <Icon
+          key={platform.id}
+          as={iconMap[platform.slug]}
+          color="gray.400"
+        ></Icon>
+      ))}
+    </HStack>
+  );
+};
+
+export default PlatformIcon;

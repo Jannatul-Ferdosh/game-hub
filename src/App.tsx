@@ -4,8 +4,8 @@ import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
-import GameCardSekeleton from "./components/GameCardSekeleton";
 import GameHeading from "./components/GameHeading";
+import GameGrid from "./components/GameGrid";
 
 function App() {
   return (
@@ -29,14 +29,14 @@ function App() {
         </Show>
         <GridItem area="main">
           <GameHeading/>
-          <Flex>
+          <Flex marginBottom={5}>
             <Box marginRight={5}>
               <PlatformSelector />
             </Box>
             <SortSelector />
           </Flex>
+          <GameGrid/>
         </GridItem>
-        <GameCardSekeleton/>
       </Grid>
     </>
   );
