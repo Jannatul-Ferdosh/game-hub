@@ -5,10 +5,10 @@ import ColorModeSwitch from "./ColorModeSwitch";
 
 const NavBar = () => {
   return (
-    <HStack padding='10px'>
-      <Image src={logo} boxSize="60px" objectFit="cover"/>
-      <SearchInput/>
-      <ColorModeSwitch/>
+    <HStack padding="10px">
+      <Image src={logo} boxSize="60px" objectFit="cover" />
+      <SearchInput />
+      <ColorModeSwitch />
     </HStack>
   );
 };

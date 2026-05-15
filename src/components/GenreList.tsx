@@ -14,6 +14,7 @@ import useGameQueryStore from "../store";
 const GenreList = () => {
   const { data, error, isLoading } = useGenres();
   const setGenreId = useGameQueryStore((s) => s.setGenreId);
+  const selectedGenreId = useGameQueryStore((s) => s.gameQuery.genreId);
 
   if (error) return null;
   if (isLoading) return <Spinner />;
@@ -32,7 +33,11 @@ const GenreList = () => {
                 objectFit="cover"
                 src={getCroppedImageUrl(genre.image_background)}
               />
-              <Button variant="link" onClick={() => setGenreId(genre.id)}>
+              <Button
+                fontWeight={genre.id === selectedGenreId ? "bold" : "normal"}
+                variant="link"
+                onClick={() => setGenreId(genre.id)}
+              >
                 {genre.name}
               </Button>
             </HStack>
