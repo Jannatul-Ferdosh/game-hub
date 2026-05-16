@@ -1,7 +1,6 @@
 import { Box, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
 import "./App.css";
 import GenreList from "./components/GenreList";
-import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
@@ -10,7 +9,6 @@ import GameGrid from "./components/GameGrid";
 function App() {
   return (
     <>
-      <NavBar />
       <Grid
         templateAreas={{
           base: `"main"`,
@@ -28,14 +26,14 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area="main">
-          <GameHeading/>
+          <GameHeading />
           <Flex marginBottom={5}>
             <Box marginRight={5}>
               <PlatformSelector />
             </Box>
             <SortSelector />
           </Flex>
-          <GameGrid/>
+          <GameGrid />
         </GridItem>
       </Grid>
     </>
