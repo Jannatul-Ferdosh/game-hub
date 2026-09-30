@@ -1,4 +1,4 @@
-import { GridItem, Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import { GridItem, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
 import useGame from "../hooks/UseGame";
 import { useParams } from "react-router-dom";
 import GameAttibutes from "./GameAttibutes";
